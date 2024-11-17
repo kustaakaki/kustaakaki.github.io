@@ -1,0 +1,24 @@
+.color-example {
+    color:chocolate;
+    background-color:rgb(23, 23, 23);
+    border: 3px beige
+}
+.header-example {
+    color: chocolate;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 32px
+}
+.list-example {
+    list-style-type:disc;
+    color:black
+}
+.text-example {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+.div-example {
+    background-color: goldenrod;
+    border: 2px black
+}
