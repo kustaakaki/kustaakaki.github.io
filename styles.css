@@ -6,7 +6,14 @@
 .header-example {
     color: chocolate;
     font-family:Verdana, Geneva, Tahoma, sans-serif; 
-    font-size: 32px
+    font-size: 32px;
+    margin-top: 20px;
+}
+.tagline {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: transparent;
+    font-style: italic;
 }
 .list-example {
     list-style-type:disc;
@@ -21,4 +28,84 @@
 .div-example {
     background-color: goldenrod;
     border: 2px black
+}
+.corner-link {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 1;
+    text-decoration: none;
+    color:darkgoldenrod;
+    font-size: 14px;
+    background-color:bisque;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+}
+
+.corner-link:hover {
+    background-color:coral;
+    color:white ;
+}
+img {
+    display: block;
+    margin: 0 auto; 
+    margin-left: 50px; 
+    margin-bottom: 20px; 
+    padding: 0;
+}
+.image-container {
+    margin: 10px auto;
+    padding: 0; 
+}
+figure {
+    display: block; 
+    margin: 0; 
+    margin-left: 0px;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: left;
+}
+figcaption {
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+body {
+    position: relative;
+    background-color:rgb(227, 204, 143); 
+}
+h1, h2 {
+    border: 2px solid #444;
+    padding: 10px;
+    border-radius: 8px;
+    background-color:rgb(232, 211, 48);
+    margin-bottom: 20px;
+}
+header, h2 {
+    display: inline-block;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px; 
+}
+p {
+    display: block;
+    margin-bottom: 15px;
+}
+header {
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: darkkhaki;
+    text-align: center;
+}
+.header-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: chocolate;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
