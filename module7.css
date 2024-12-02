@@ -13,7 +13,7 @@ p {
 }
 
 .navbar {
-    background-color: darkgoldenrod;
+    background-color: rgb(237, 202, 114);
     padding-top: 15px;
     padding-bottom: 15px;
     border: 0;
@@ -23,8 +23,13 @@ p {
     letter-spacing: 5px;
 }
 
-.navbar-nav li a:hover {
-    color: #1abc9c;
+.navbar-default .navbar-nav > li > a {
+    color: black; /* Set your desired color */
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {
+    color:#f5f6f7; /* Change color on hover/focus */
 }
 
 .bg-1 {
@@ -59,11 +64,24 @@ p {
 }
 
 .bg-1 h3 {
-    margin: 10px 0;
+    font-size: 2.5rem; /* Responsive font size */
+    max-width: 350px; /* Matches the logo image width */
+    margin: 10px auto; /* Centers the header horizontally */
     z-index: 1;
     position: relative;
     font-weight: bold;
+    text-align: center; /* Ensures proper alignment for the text */
+    word-wrap: break-word; /* Handles long words gracefully */
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 1s;
 }
+.bg-1 img {
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 0.5s; /* Logo fades in first */
+}
+
 
 .bg-2 {
     background-color: #474e5d;
@@ -87,9 +105,9 @@ p {
 }
 
 .bg-4 {
-    background-color: darkgoldenrod; 
-    color: #ffffff; 
-    padding: 50px 20px;
+    background-color: rgb(236, 195, 92); 
+    color: rgb(52, 52, 52); 
+    padding: 30px 20px;
 }
 .text-box {
     display: inline-block;
@@ -151,4 +169,59 @@ p {
 
 .shout-box button:hover {
     background-color: #555; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .bg-1 h3 {
+        font-size: 2rem; /* Adjust for smaller screens */
+    }
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in animation to WHO section elements */
+#who img, #who h3 {
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 2s ease-in-out forwards; /* Trigger the fade-in */
+}
+
+/* Staggered animation for better effect */
+#who img {
+    animation-delay: 0.5s; /* Logo fades in first */
+}
+
+#who h3 {
+    animation-delay: 1s; /* Text fades in after logo */
+}
+
+@media (max-width: 768px) {
+    /* Adjust the font size for the WHO section text */
+    .bg-1 h3 {
+        font-size: 2rem; /* Smaller font for mobile */
+    }
+
+    /* Ensure the navbar fonts and padding are adjusted for smaller screens */
+    .navbar {
+        font-size: 10px;
+        padding: 10px 0;
+    }
+
+    /* Reduce padding for all sections */
+    .bg-1, .bg-2, .bg-3, .shout-box-section {
+        padding: 20px 10px;
+    }
 }
