@@ -14,22 +14,26 @@ p {
 
 .navbar {
     background-color: rgb(237, 202, 114);
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: 0;
     border-radius: 0;
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: black; /* Set your desired color */
+    color: black; 
 }
 
 .navbar-default .navbar-nav > li > a:hover, 
 .navbar-default .navbar-nav > li > a:focus {
-    color:#f5f6f7; /* Change color on hover/focus */
+    color:#f5f6f7;
 }
 
 .bg-1 {
@@ -42,7 +46,7 @@ p {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 600px; 
+    height: 100vh; 
     overflow: hidden;
 }
 
@@ -64,22 +68,22 @@ p {
 }
 
 .bg-1 h3 {
-    font-size: 2.5rem; /* Responsive font size */
-    max-width: 350px; /* Matches the logo image width */
-    margin: 10px auto; /* Centers the header horizontally */
+    font-size: 2.5rem; 
+    margin: 10px 0;
     z-index: 1;
     position: relative;
     font-weight: bold;
-    text-align: center; /* Ensures proper alignment for the text */
-    word-wrap: break-word; /* Handles long words gracefully */
+    text-align: center;
+    word-wrap: break-word;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
     animation-delay: 1s;
 }
 .bg-1 img {
-    opacity: 0; /* Start invisible */
-    animation: fadeIn 2s ease-in-out forwards;
-    animation-delay: 0.5s; /* Logo fades in first */
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+    margin: 10px 0;
 }
 
 
@@ -105,8 +109,8 @@ p {
 }
 
 .bg-4 {
-    background-color: rgb(236, 195, 92); 
-    color: rgb(52, 52, 52); 
+    background-color: rgb(237, 202, 114); 
+    color: black; 
     padding: 30px 20px;
 }
 .text-box {
@@ -126,49 +130,58 @@ p {
     background-color: #444444;
 }
 
-.shout-box {
-    position: relative;
-    background: url("lumme.jpg") no-repeat center center;
-    background-size: cover;
-    color: #ffffff;
-    padding: 50px 20px;
-    max-width: 600px;
-    height: auto;
-    margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-}
-
 .shout-box-section {
     background-color: #474e5d;
     padding: 50px 0;
+    text-align: center;
 }
 
-.shout-box h3,
-.shout-box p {
-    position: relative;
-    z-index: 1;
-    font-weight: bold;
+.shout-box {
+    background: url("lumme.jpg") no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 20px 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.shout-box .form-control {
+.shout-box input[type="text"], .shout-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 15px;
     background: rgba(255, 255, 255, 0.8);
 }
 
 .shout-box button {
-    background-color: #333; 
-    color: #fff;
+    background-color: #333;
+    color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .shout-box button:hover {
-    background-color: #555; 
+    background-color:rgb(237, 202, 114);
+}
+
+.shout-box h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.shout-box p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #ffffff;
 }
 
 html {
@@ -177,15 +190,14 @@ html {
 
 @media (max-width: 768px) {
     .bg-1 h3 {
-        font-size: 2rem; /* Adjust for smaller screens */
+        font-size: 2rem;
     }
 }
 
-/* Keyframes for fade-in effect */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Slight upward movement */
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -193,34 +205,29 @@ html {
     }
 }
 
-/* Apply fade-in animation to WHO section elements */
 #who img, #who h3 {
-    opacity: 0; /* Start invisible */
-    animation: fadeIn 2s ease-in-out forwards; /* Trigger the fade-in */
+    opacity: 0; 
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
-/* Staggered animation for better effect */
 #who img {
-    animation-delay: 0.5s; /* Logo fades in first */
+    animation-delay: 0.5s; 
 }
 
 #who h3 {
-    animation-delay: 1s; /* Text fades in after logo */
+    animation-delay: 1s;
 }
 
 @media (max-width: 768px) {
-    /* Adjust the font size for the WHO section text */
     .bg-1 h3 {
-        font-size: 2rem; /* Smaller font for mobile */
+        font-size: 2rem;
     }
 
-    /* Ensure the navbar fonts and padding are adjusted for smaller screens */
     .navbar {
         font-size: 10px;
         padding: 10px 0;
     }
 
-    /* Reduce padding for all sections */
     .bg-1, .bg-2, .bg-3, .shout-box-section {
         padding: 20px 10px;
     }
