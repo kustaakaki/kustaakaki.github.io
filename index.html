@@ -10,7 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body id="home">
 
 
 <nav class="navbar navbar-default">
@@ -21,7 +21,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Home</a>
+      <a class="navbar-brand" href="#home">Home</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -55,7 +55,7 @@
     <div class="row">
       <div class="col-sm-6">
         <a href="https://open.spotify.com/playlist/6hpwh7hRwjAcXd9hzB8ZqT" target="_blank" class="text-box">
-          Kovaa Jazzia playlist on Spotify
+          Kovaa Jazzia on Spotify
         </a>
       </div>
   
@@ -67,26 +67,25 @@
     </div>
 </div>
   
-
 <div id="contact" class="shout-box-section">
-    <div class="container shout-box text-center">
-        <h3>Shout Box</h3>
-        <p>Send your greetings, questions or roster changes to Oksa!</p>
-        <form action="mailto:kovaajazzia@gmail.com" method="post" enctype="text/plain">
-            <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <textarea class="form-control" placeholder="Your Message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-default btn-lg">Send</button>
-        </form>
-    </div>
+  <div class="container shout-box text-center">
+      <h3>Morning Skate</h3>
+      <p>Send your greetings, questions, or roster changes to Oksa!</p>
+      <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mrbgrnyw" method="post">
+          <div class="form-group">
+              <input type="text" name="name" id="full-name" class="form-control" placeholder="Your Nickname (optional)">
+          </div>
+          <div class="form-group">
+              <textarea name="message" id="message" class="form-control" placeholder="Dump in, take the hit or make a play" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-default btn-lg">Shoot the puck</button>
+      </form>
+  </div>
 </div>
-  
+
 
 <footer class="container-fluid bg-4 text-center">
-  <p>2024 KOVAA JAZZIA. All Rights Reserved. </p> 
+  <p>2024 KOVAA JAZZIA. All Rights Reserved. kovaajazzia@gmail.com </p> 
 </footer>
 
 </body>
